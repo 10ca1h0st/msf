@@ -6,8 +6,8 @@ dir=`basename $dir_full`
 /usr/bin/expect << EOF
 
 set timeout 20
-set commit [lindex $argv 0]
-set passwd [lindex $argv 1]
+set commit $1
+set passwd $2
 spawn git add .
 spawn git commit -m"$commit"
 spawn git push https://github.com/wujiaming123/${dir}.git master
